@@ -1,0 +1,436 @@
+#{extends 'main.html' /}
+#{set title:'Roxanne Sergio' /}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/public/stylesheets/tox-progress.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="/public/javascripts/toxprogress/tox-progress.js"></script>
+<script type="text/javascript" src="/public/javascripts/toolkit/showBanners.js"></script>
+<script type="text/javascript" src="/public/javascripts/litebox/litebox.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    // Change style of navbar on scroll
+    window.onscroll = function() {myFunction()};
+    function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+        } else {
+            navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+        }
+    }
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+<body>
+<div class="w3-top" ng-controller="featureCtrl">
+    <div class="w3-bar" id="myNavbar">
+        <a class="w3-bar-item" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+        <a href="#skills" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-certificate"></i> SKILLS</a>
+        <a href="#resume" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+        <a href="#" class="w3-bar-item w3-button">HOME</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="#resume" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+        <a href="#skills" class="w3-bar-item w3-button" onclick="toggleFunction()">SKILLS</a>
+        <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    </div>
+</div>
+<div class="parallax">
+    <!--<div ></div>-->
+    <div class="w3-display-middle w3-margin-top w3-center" >
+            <center><img class="img-responsive" src="/public/images/me.jpg"></center>
+        <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min" style="font-family:Penultimate ;"><b>Roxanne Sergio</b></span></h1>
+        <p class="w3-hide-small w3-text-black">Software Engineer (Back-end Developer)</p>
+        <p><i class="fa fa-envelope"></i> <a class="email" href="mailto:sergio.roxanne0731@gmail.com">&nbsp;&nbsp;sergio.roxanne0731@gmail.com</a></p>
+        <p><i class="fa fa-phone"></i>&nbsp;&nbsp;+639067494938</p>
+    </div>
+</div>
+<div class="resume" id="resume">
+    <div class="right-side">
+        <div class="slideshow-container">
+            <a class="button" href="/public/images/SergioCV.pdf" download="SergioCV">Resume</a>
+            <div class="mySlides fade">
+                <div class="text">
+                    <h2><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-black" ></i>Work Experience</h2>
+                    <ul class="block">
+                        <h5 class="work-title"> <b>Software Engineer | Junior Developer</b></h5>
+                        <p class="work-place"><a href="http://en.newkinpogroup.com"><img class="icon" src="/public/images/kinpo.jpg" alt="New Kinpo Group"></a> Kinpo Electronics (Philippines) Inc.</p>
+                        <p class="work-address"> Block 7 Lot 1, Main Blvd, Lima Technology Center, SEZ Lipa City, Batangas</p>
+                        <p class="fa fa-calendar "> July 28, 2016 up to Present</p>
+                        <ul>
+                            <li class="work-desc"> Back-End Developer</li>
+                            <li class="work-desc"> Part of cloud and online services</li>
+                            <li class="work-desc"> Handle Banner Backstage Improvement project</li>
+                            <li class="work-desc"> Support incoming task for XYZ-printing and XYZ e-shop</li>
+                            <li class="work-desc"> Support CSD(Customer Service Department) related task</li>
+                            <li class="work-desc"> Modify and Integrate Restful Webservice for webpage development</li>
+                            <li class="work-desc"> Fix formal and stage website issue</li>
+                            <li class="work-desc"> Example of website: <a href="http://us.xyzprinting.com/us_en/Home">www.xyzprinting.com</a> and <a href="https://www.xyzeshop.com/us_en/">www.xyzeshop.com</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="text">
+                    <h2><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-black" ></i>Work Experience</h2>
+                    <ul class="block">
+                        <h5 class="work-title"><b>Data Encoder | Driver's License Releasing Officer (Internship)</b> </h5>
+                        <p class="work-place"><a href="http://www.lto.gov.ph/"><img class="icon" src="/public/images/lto.jpg" alt="Land Transportation Office"></a> L.T.O Calamba District Office</p>
+                        <p class="work-add"> Brgy. Uno, Crossing Calamba City</p>
+                        <p class="fa fa-calendar "> May 21, 2015 – June 26, 2015 (200 hours)</p>
+                        <ul>
+                            <p><li class="work-desc"> Release Driver's License</li></p>
+                            <p><li class="work-desc"> Compile and sort data</li></p>
+                            <p><li class="work-desc"> Encode transaction in applying Driver's License</li></p>
+                            <p><li class="work-desc"> Assign in taking photo and signature of applicant</li></p>
+                            <p><li class="work-desc" > Respond to requests and inquiry of information <br>&nbsp;about application of Driver's License</li></p>
+                        </ul>
+                    </ul>
+                    <br/>
+                </div>
+            </div>
+            <div class="mySlides fade">
+                <div class="text">
+                    <h2><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-black" ></i>Education</h2>
+                    <ul class="block">
+                        <div class="educ">
+                            <p class="fa fa-calendar "> 2012-2016</p>
+                            <h5 class="educ-name"><img class="icon" src="/public/images/ccc.jpg" alt="City College of Calamba">&nbsp; City College of Calamba</h5>
+                            <ul>
+                                <li class="educ-desc"> Bachelor of Science in Information Technology</li>
+                                <li class="educ-add"> Old Municipal Site, Brgy. VII, Poblacion, Calamba City</li>
+                            </ul>
+                        </div>
+                        <div class="educ">
+                            <p class="fa fa-calendar "> 2008-2012</p>
+                            <h5 class="educ-name"><img class="icon" src="/public/images/campvicente.jpg" alt="Camp Vicente Lim National High School">&nbsp;  Camp Vicente Lim National High School</h5>
+                            <ul>
+                                <li class="educ-add"> Camp Vicente Lim, Mayapa, Calamba City, Laguna </li>
+                            </ul>
+                        </div>
+                        <div class="educ">
+                            <p class="fa fa-calendar "> 2002-2008</p>
+                            <h5 class="educ-name"><img class="icon" src="/public/images/pacianorizal.jpg" alt="Paciano Rizal Elementary School">&nbsp; Paciano Rizal Elementary School</h5>
+                            <ul>
+                                <li class="educ-add"> Rizal Village, Paciano Rizal, Calamba City, Laguna</li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <!--<a class="prev" onclick="plusSlides(-1)">&#10094;</a>-->
+            <!--<a class="next" onclick="plusSlides(1)">&#10095;</a>-->
+        </div>
+        <br>
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <!--<div style="text-align:center;">-->
+            <!--<span class="dot" onclick="currentSlide(1)"></span>-->
+            <!--<span class="dot" onclick="currentSlide(2)"></span>-->
+            <!--<span class="dot" onclick="currentSlide(3)"></span>-->
+        <!--</div>-->
+    </div>
+    <div class="left-side">
+        <div class="content" style="text-align: center;">
+            <img class="res-pic" src="/public/images/roxanne.jpg" alt="roxanne">
+        </div>
+        <div class="social-nav">
+            <a class="media" href="mailto:sergio.roxanne0731@gmail.com">
+                <img class="icon" src="/public/images/media/gmail.png" alt="gmail">
+            </a>
+            <a class="media" href="live:e951660b676de4a2?chat">
+                <img class="icon" src="/public/images/media/skype.png" alt="skype">
+            </a>
+            <a class="media" href="https://www.facebook.com/roxanne.sergio" target="_blank">
+                <img class="icon" src="/public/images/media/fb.png" alt="facebook">
+            </a>
+            <a class="media" href="https://www.instagram.com/roxannesergio/" target="_blank">
+                <img class="icon" src="/public/images/media/ig.png" alt="instagram">
+            </a>
+            <a class="media" href="https://twitter.com/roxannesergio" target="_blank">
+                <img class="icon" src="/public/images/media/twitter.png" alt="twitter">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="skills" id="skills">
+    <div class="right-con">
+        <div id="bars">
+            <h2 class="skills-title"> <img class="icon" src="/public/images/skills/BE.png" alt="Back End"> Back End</h2>
+            <div class="bar" data-percent="80">
+                <span><img class="icon" src="/public/images/skills/java.png" alt="Java"> </span>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <div class="bar" data-percent="80">
+                <span><img class="bandge" src="/public/images/skills/play.png" alt="Play Framnework"></span>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <div class="bar" data-percent="70">
+                <span><img class="bandge" src="/public/images/skills/sql.png" alt="Microsoft SQL Server"> </span>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <div class="bar" data-percent="70">
+                <span><img class="bandge" src="/public/images/skills/git.png" alt="GIT-version"> </span>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <div class="bar" data-percent="70">
+                <span><img class="bandge" src="/public/images/skills/wazure.png" alt="Windows Azure - Cloud Storage"> </span>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <div class="bar" data-percent="60">
+                <span><img class="icon" src="/public/images/skills/csharp.png" alt="C#"> </span>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <div class="bar" data-percent="60">
+                <span><img class="bandge" src="/public/images/skills/vb.png" alt="VB.net"> </span>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <div class="bar" data-percent="60">
+                <span><img class="bandge" src="/public/images/skills/cplus.png" alt="C/ C++"> </span>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <div class="bar" data-percent="50">
+                <span><img class="icon" src="/public/images/skills/restapi.png" alt="REST EASY Webservice"> </span>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+        </div>
+        <div id="bars">
+            <h2 class="skills-title"> <img class="icon" src="/public/images/skills/FE.png" alt="Front End"> Front End</h2>
+            <div class="bar" data-percent="70">
+                <span><img class="icon" src="/public/images/skills/html.png" alt="HTML/HTML 5">  </span>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <div class="bar" data-percent="70">
+                <span><img class="icon" src="/public/images/skills/js.png" alt="JavaScript">  </span>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <div class="bar" data-percent="70">
+                <span><img class="bandge" src="/public/images/skills/jquery.png" alt="JQuery">  </span>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <div class="bar" data-percent="60">
+                <span><img class="icon" src="/public/images/skills/css.png" alt="CSS3/SCSS">  </span>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+            <div class="bar" data-percent="50">
+                <span><img class="icon" src="/public/images/skills/angular.png" alt="AngularJS">  </span>
+                <canvas class="bar-circle" width="70" height="70"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="left-con">
+        <div class="vmiddle">
+            <h1 style="text-align:center; font-size: 70px;margin-top: 300px;">Skills</h1>
+        </div>
+    </div>
+</div>
+<div class="contact" id="contact">
+    <div class="right">
+        <ul>
+
+        </ul>
+        <ul class="conblock">
+            <p><h2>Please don't hesitate to contact me for more information about my work.</h2></p>
+            <h3 class="name">Roxanne Sergio</h3>
+            <p >Software Engineer (Back-end Developer)</p>
+            <p><img src="">+639067494938</p>
+            <p><i class="fa fa-envelope"></i><a class="email" href="mailto:sergio.roxanne0731@gmail.com">&nbsp;&nbsp;sergio.roxanne0731@gmail.com</a></p>
+        </ul>
+        <div class="conblock">
+            <a class="media" href="https://www.linkedin.com/in/roxanne-sergio-19b9a6137/" target="_blank">
+                <img class="icon" src="/public/images/black logo/linkedin.png" alt="linked in">
+            </a>
+            <a class="media" href="https://www.facebook.com/roxanne.sergio" target="_blank">
+                <img class="icon" src="/public/images/black logo/fb.png" alt="facebook">
+            </a>
+            <a class="media" href="live:e951660b676de4a2?chat">
+                <img class="icon" src="/public/images/black logo/skype1.png" alt="skype">
+            </a>
+            <a class="media" href="https://www.instagram.com/roxannesergio/" target="_blank">
+                <img class="icon" src="/public/images/black logo/ig.png" alt="instgram">
+            </a>
+            <a class="media" href="https://twitter.com/roxannesergio" target="_blank">
+                <img class="icon" src="/public/images/black logo/twitter.png" alt="twitter">
+            </a>
+        </div>
+
+    </div>
+    <div class="left">
+        <div class="vmiddle">
+            <h1 style="text-align:center; font-size: 70px; margin-top: 300px; color:white">Contacts</h1>
+        </div>
+    </div>
+</div>
+<div class="parallax">
+    <!--<footer >-->
+        <!--<div class="footer">-->
+            <!--<p class="">Copyright © 2017 Roxanne Sergio </p>-->
+        <!--</div>-->
+    <!--</footer>-->
+</div>
+
+</body>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 10000); // Change image every 2 seconds
+}
+</script>
+<script>
+    /* Credits:
+ * https://www.developphp.com/video/JavaScript/Circular-Progress-Loader-Canvas-JavaScript-Programming-Tutorial
+ */
+
+(function() {
+
+	var Progress = function( element ) {
+
+		this.context = element.getContext( "2d" );
+		this.refElement = element.parentNode;
+		this.loaded = 0;
+		this.start = 4.72;
+		this.width = this.context.canvas.width;
+		this.height = this.context.canvas.height;
+		this.total = parseInt( this.refElement.dataset.percent, 10 );
+		this.timer = null;
+
+		this.diff = 0;
+
+		this.init();
+	};
+
+	Progress.prototype = {
+		init: function() {
+			var self = this;
+			self.timer = setInterval(function() {
+				self.run();
+			}, 25);
+		},
+		run: function() {
+			var self = this;
+
+			self.diff = ( ( self.loaded / 100 ) * Math.PI * 2 * 10 ).toFixed( 2 );
+			self.context.clearRect( 0, 0, self.width, self.height );
+			self.context.lineWidth = 10;
+			self.context.fillStyle = "#000";
+			self.context.strokeStyle = "red";
+			self.context.textAlign = "center";
+
+			self.context.fillText( self.loaded + "%", self.width * .5, self.height * .5 + 2, self.width );
+			self.context.beginPath();
+			self.context.arc( 35, 35, 30, self.start, self.diff / 10 + self.start, false );
+			self.context.stroke();
+
+			if( self.loaded >= self.total ) {
+				clearInterval( self.timer );
+			}
+
+			self.loaded++;
+		}
+	};
+
+	var CircularSkillBar = function( elements ) {
+		this.bars = document.querySelectorAll( elements );
+		if( this.bars.length > 0 ) {
+			this.init();
+		}
+	};
+
+	CircularSkillBar.prototype = {
+		init: function() {
+			this.tick = 25;
+			this.progress();
+
+		},
+		progress: function() {
+			var self = this;
+			var index = 0;
+			var firstCanvas = self.bars[0].querySelector( "canvas" );
+			var firstProg = new Progress( firstCanvas );
+
+
+
+			var timer = setInterval(function() {
+				index++;
+
+				var canvas = self.bars[index].querySelector( "canvas" );
+				var prog = new Progress( canvas );
+
+				if( index == self.bars.length ) {
+						clearInterval( timer );
+				}
+
+			}, self.tick * 100);
+
+		}
+	};
+
+	document.addEventListener( "DOMContentLoaded", function() {
+		var circularBars = new CircularSkillBar( "#bars .bar" );
+	});
+
+})();
+</script>
+<!--<script>-->
+    <!--var slideIndex = 1;-->
+<!--showSlides(slideIndex);-->
+
+<!--function plusSlides(n) {-->
+  <!--showSlides(slideIndex += n);-->
+<!--}-->
+
+<!--function currentSlide(n) {-->
+  <!--showSlides(slideIndex = n);-->
+<!--}-->
+
+<!--function showSlides(n) {-->
+  <!--var i;-->
+  <!--var slides = document.getElementsByClassName("mySlides");-->
+  <!--var dots = document.getElementsByClassName("dot");-->
+  <!--if (n > slides.length) {slideIndex = 1}-->
+  <!--if (n < 1) {slideIndex = slides.length}-->
+  <!--for (i = 0; i < slides.length; i++) {-->
+      <!--slides[i].style.display = "none";-->
+  <!--}-->
+  <!--for (i = 0; i < dots.length; i++) {-->
+      <!--dots[i].className = dots[i].className.replace(" active", "");-->
+  <!--}-->
+  <!--slides[slideIndex-1].style.display = "block";-->
+  <!--dots[slideIndex-1].className += " active";-->
+<!--}-->
+<!--</script>-->
